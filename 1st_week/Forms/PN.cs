@@ -1,6 +1,12 @@
-﻿using SAPbobsCOM;
+﻿using _1st_week.Models;
+using Newtonsoft.Json;
+using RestSharp;
+using SAPbobsCOM;
 using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Policy;
+using System.Text.Json.Serialization;
 using System.Windows.Forms;
 
 namespace _1st_week.Forms
@@ -308,6 +314,78 @@ namespace _1st_week.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(textBox9.Text))
+                {
+                    string url = $"https://viacep.com.br/ws/{textBox9.Text}/json/";
+
+                    getCep(url);
+
+                }
+                else {
+
+                    MessageBox.Show("Informe um CEP para realizar a busca!");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void getCep(string cep)
+        {
+            try
+            {
+                var client = new RestClient(cep);
+                var request = new RestRequest();
+
+                RestResponse response = client.Execute(request);
+
+                if (response.IsSuccessful)
+                {
+                   CEP end = JsonConvert.DeserializeObject<CEP>(response.Content);
+
+                    if (!String.IsNullOrEmpty(end.erro) && end.erro == "true")
+                    {
+                        throw new Exception("CEP inválido ou inexistente!");
+                    } 
+
+                    if (dataGridView2.Rows.Count == 0 || !dataGridView2.Rows[dataGridView2.Rows.Count - 1].IsNewRow)
+                    {
+                        dataGridView2.Rows.Add();
+                    }
+
+                    int rowIndex = dataGridView2.Rows.Count - 1;
+
+                    DataGridViewRow row = dataGridView2.Rows[rowIndex];
+
+                    row.Cells["TextBoxColumn2"].Value = end.logradouro;
+                    row.Cells["TextBoxColumn3"].Value = end.complemento;
+                    row.Cells["TextBoxColumn4"].Value = end.cep;
+                    row.Cells["TextBoxColumn5"].Value = end.bairro;
+                    row.Cells["TextBoxColumn6"].Value = "BR";
+                    row.Cells["TextBoxColumn7"].Value = end.uf;
+                    row.Cells["TextBoxColumn8"].Value = end.localidade;
+
+                }
+                else
+                {
+                    throw new Exception("CEP inválido ou inexistente!");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+           
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.Button button1;
             System.Windows.Forms.Button button2;
+            System.Windows.Forms.Button button3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PN));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,10 +60,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.ComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.TextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,8 +71,14 @@
             this.TextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             button1 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
+            button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -364,6 +367,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(button3);
+            this.tabPage3.Controls.Add(this.textBox9);
             this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
@@ -395,42 +400,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1113, 243);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(824, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "CNPJ / CPF";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(945, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 22);
-            this.textBox1.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(778, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 20);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Inscrição Estadual";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(945, 47);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 22);
-            this.textBox4.TabIndex = 15;
             // 
             // ComboBoxColumn1
             // 
@@ -512,6 +481,64 @@
             this.TextBoxColumn8.Name = "TextBoxColumn8";
             this.TextBoxColumn8.Width = 125;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(824, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "CNPJ / CPF";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(945, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(229, 22);
+            this.textBox1.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(778, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(147, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Inscrição Estadual";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Location = new System.Drawing.Point(945, 47);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(229, 22);
+            this.textBox4.TabIndex = 15;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Location = new System.Drawing.Point(18, 280);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(112, 22);
+            this.textBox9.TabIndex = 19;
+            // 
+            // button3
+            // 
+            button3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button3.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            button3.Location = new System.Drawing.Point(136, 280);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(162, 31);
+            button3.TabIndex = 19;
+            button3.Text = "Buscar CEP";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // PN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -543,6 +570,7 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -594,5 +622,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn TextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn TextBoxColumn8;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
