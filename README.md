@@ -13,6 +13,11 @@ CADASTRO DE PN
 
 ![image](https://github.com/Jonatas-Souza/SAPB1_DIAPI/assets/110689948/bd3b1d27-6ead-4498-be8c-35dc2e78fb60)
 
+CADASTRO DE PN - ABA ENDEREÇO (BOTÃO BUSCA CEP QUE CONSUME UMA API GRATUITA DE CEPs UTILIZANDO A LIB RESTSHARP)
+
+![image](https://github.com/Jonatas-Souza/SAPB1_DIAPI/assets/110689948/5fbdbb79-c63f-47be-86bd-e2d862aed2db)
+
+
 CADASTRO DE ITENS
 
 ![image](https://github.com/Jonatas-Souza/SAPB1_DIAPI/assets/110689948/12931b15-1506-4a04-8a9b-43a66e3c0a49)
