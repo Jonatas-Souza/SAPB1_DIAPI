@@ -1,5 +1,8 @@
 # SAPB1_DIAPI
-Projeto de estudo realizado com SAP B1 versão 10 SQL Server utilizando windows forms como front, o projeto tem as operações básicas da DI API.
+Projeto de estudo que gera diferentes transações no SAP B1 através da DI API.
+
+  - Ambiente: SAP B1 10 - SQL SERVER
+  - Tecnologias aplicadas: C# / .NET Framework / Windows forms / Rest Sharp / Newtonsoft.Json / DI API
 
 TELA DE LOGIN
 
